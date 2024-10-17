@@ -7,7 +7,8 @@ import (
 	"github.com/kh3rld/guess-it-1/variance"
 )
 
-func StandardD(x []float64) float64 {
-	m := mean.Mean(x)
-	return math.Sqrt(variance.Variance(x, m))
+// Calculate the standard deviation
+func StandardD(data []float64) float64 {
+	m := mean.Mean(data)
+	return math.Sqrt(variance.Variance(data, m))
 }
