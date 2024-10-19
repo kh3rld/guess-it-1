@@ -12,5 +12,5 @@ func Range(data []float64) (float64, float64) {
 	}
 	m := mean.Mean(data)
 	sd := sd.StandardD(data)
-	return m - 3*sd, m + 3*sd
+	return m - sd*2, m + sd*2
 }
