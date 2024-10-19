@@ -16,7 +16,6 @@ This Go project provides essential functions for statistical analysis, including
   - [Range](#range)
 - [Testing](#testing)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
