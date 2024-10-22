@@ -1,21 +1,6 @@
 # Guess IT
 
-## Overview
-
 This Go project provides essential functions for statistical analysis, including calculating the **mean**, **variance**, **standard deviation**, and **range** of a dataset. It is designed to be simple and efficient, making it suitable for data analysis tasks in Go applications.
-
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Functions](#functions)
-  - [Mean](#mean)
-  - [Variance](#variance)
-  - [StandardD](#standardd)
-  - [Range](#range)
-- [Testing](#testing)
-- [Contributing](#contributing)
 
 ## Features
 
