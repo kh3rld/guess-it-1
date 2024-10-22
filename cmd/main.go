@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 
@@ -21,9 +22,18 @@ func main() {
 			continue
 		}
 
+		if num < math.MinInt || num > math.MaxInt {
+			fmt.Println("Overflow digit detected")
+			return
+		}
+
 		numbers = append(numbers, num)
 		if len(numbers) > 1 {
-			lower, upper := diff.Range(numbers[:len(numbers)-1])
+			lower, upper := diff.Range(numbers)
+			if lower < math.MinInt64 || upper > math.MaxInt64 {
+				fmt.Println("Overflow digit detected")
+				return
+			}
 			fmt.Printf("%.0f %.0f\n", lower, upper)
 		}
 	}

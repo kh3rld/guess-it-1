@@ -1,14 +1,14 @@
 package variance
 
-// Calculate the variance of a slice of float64 numbers
-func Variance(data []float64, m float64) float64 {
-	if len(data) == 0 {
-		return 0
+import "github.com/kh3rld/guess-it-1/mean"
+
+// Variance is the expected value of the squared deviation from the mean of a random variable.
+func Variance(x []float64) float64 {
+	m := mean.Mean(x)
+	r := []float64{}
+	for _, x1 := range x {
+		y := x1 - m
+		r = append(r, y*y)
 	}
-	var total float64
-	for _, value := range data {
-		diff := value - m
-		total += diff * diff
-	}
-	return total / float64(len(data))
+	return mean.Mean(r)
 }
